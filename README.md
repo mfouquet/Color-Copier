@@ -1,12 +1,12 @@
 #Color Copier Sketch Plugin
 
 This plugin allows you to quickly copy either the RGB or HEX values for both the
-fill and border colors. The default hotkey is **Shift + Ctrl + C**.
+fill and border colors. The default hotkey is **`Shift`** + **`Ctrl`** + **`C`**.
 
 ##Installation
 1. Download the plugin and double-click to install.
 
-(http://i.imgur.com/o8xMHmb.jpg)
+![screenshot](http://i.imgur.com/o8xMHmb.jpg  "Color Copier Screenshot")
 
 If that doesn't work:
 1. Download the plugin.
