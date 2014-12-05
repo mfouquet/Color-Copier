@@ -3,7 +3,7 @@
 This plugin allows you to quickly copy either the RGB or HEX values for both the
 fill and border colors. The default hotkey is `Shift` + `Ctrl` + `C`.
 
-![screenshot](http://i.imgur.com/C4EczFw.png  "Color Copier Screenshot")
+![screenshot](http://i.imgur.com/TYf9xLo.png  "Color Copier Screenshot")
 
 ##Installation
 1. Download the plugin and double-click to install.
