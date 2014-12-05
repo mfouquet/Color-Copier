@@ -67,7 +67,7 @@ function runColorCopier() {
       if (layer.style().fills().count() > 0) {
         fill = layer.style().fills().firstObject().color();
       }
-      if (layer.style().borders() > 0) {
+      if (layer.style().borders().count() > 0) {
         border = layer.style().borders().firstObject().color();
       }
     break;
