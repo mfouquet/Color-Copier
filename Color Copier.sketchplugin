@@ -76,7 +76,7 @@ function runColorCopier() {
 
 
   // Creates the options and displays the choice modal
-  var options = ["Fill - RGB", "Fill - HEX", "Border - RGB", "Border - HEX"];
+  var options = ["Fill - RGB", "Fill - RGBA", "Fill - HEX", "Border - RGB", "Border - RGBA", "Border - HEX"];
   var selected = createSelect("What color do you want to copy?", options, 0)
 
 
@@ -94,13 +94,21 @@ function runColorCopier() {
           clipboard.set(output);
           [doc showMessage: "Fill color RGB [ " + output + " ] copied to clipboard."];
           break;
-        case 1:
+				case 1:
+						var fillColor = fill.hexValue().toString();
+						var fillAlpha = fill.alpha();
+						var rgb = hexToRgb(fillColor);
+						output = rgb.r + ", " + rgb.g + ", " + rgb.b + ", " + fillAlpha;
+						clipboard.set(output);
+						[doc showMessage: "Fill color RGBA [ " + output + " ] copied to clipboard."];
+						break;
+        case 2:
           var fillColor = fill.hexValue().toString();
           log(fillColor);
           clipboard.set(fillColor);
           [doc showMessage: "Fill color HEX [ " + fillColor + " ] copied to clipboard."];
           break;
-        case 2:
+        case 3:
           if (border != null) {
             var borderColor = border.hexValue().toString();
             var rgb = hexToRgb(borderColor);
@@ -111,7 +119,19 @@ function runColorCopier() {
             [app displayDialog:"No border to get a color from." withTitle: "Color Copier"]
           }
           break;
-        case 3:
+				case 4:
+					if (border != null) {
+						var borderColor = border.hexValue().toString();
+						var borderAlpha = border.alpha();
+						var rgb = hexToRgb(borderColor);
+						output = rgb.r + ", " + rgb.g + ", " + rgb.b + ", " + borderAlpha;
+						clipboard.set(output);
+						[doc showMessage: "Border color RGBA [ " + output + " ] copied to clipboard."];
+					} else {
+						[app displayDialog:"No border to get a color from." withTitle: "Color Copier"]
+					}
+					break;
+        case 5:
           if (border != null) {
             var borderColor = border.hexValue().toString();
             clipboard.set(borderColor);
