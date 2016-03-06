@@ -1,0 +1,37 @@
+@import 'utility.js'
+
+var copyHexFill = function(context) {
+  var selection = context.selection
+
+  if (checkLayerCount(selection.count())) {
+    var layer = selection[0]
+
+    if (checkFill(layer)) {
+      var selectedColor = getColor("fill", layer)
+      var hex = selectedColor.hexValue().toString()
+
+      clipboard.set(hex)
+
+      var doc = context.document
+      doc.showMessage("Fill color HEX [ " + hex + " ] copied to clipboard.")
+    }
+  }
+}
+
+var copyHexBorder = function(context) {
+  var selection = context.selection
+
+  if (checkLayerCount(selection.count())) {
+    var layer = selection[0]
+
+    if (checkBorder(layer)) {
+      var selectedColor = getColor("border", layer)
+      var hex = selectedColor.hexValue().toString()
+
+      clipboard.set(hex)
+
+      var doc = context.document
+      doc.showMessage("Border color HEX [ " + hex + " ] copied to clipboard.")
+    }
+  }
+}

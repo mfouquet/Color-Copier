@@ -1,0 +1,49 @@
+@import 'utility.js'
+
+var copyHsbFill = function(context) {
+  var selection = context.selection
+
+  if (checkLayerCount(selection.count())) {
+    var layer = selection[0]
+
+    if (checkFill(layer)) {
+      var selectedColor = getColor("fill", layer)
+
+      var hue = Math.round(selectedColor.hue()*360)
+      var saturation = Math.round(selectedColor.saturation()*100)
+      var brightness = Math.round(selectedColor.brightness()*100)
+
+      clipboard.set(hue + ", " + saturation + ", " + brightness)
+
+      var doc = context.document
+      doc.showMessage("Fill color HSB [ "
+        + hue + ", "
+        + saturation + ", "
+        + brightness + " ] copied to clipboard.")
+    }
+  }
+}
+
+var copyHsbBorder = function(context) {
+  var selection = context.selection
+
+  if (checkLayerCount(selection.count())) {
+    var layer = selection[0]
+
+    if (checkBorder(layer)) {
+      var selectedColor = getColor("border", layer)
+
+      var hue = Math.round(selectedColor.hue()*360)
+      var saturation = Math.round(selectedColor.saturation()*100)
+      var brightness = Math.round(selectedColor.brightness()*100)
+
+      clipboard.set(hue + ", " + saturation + ", " + brightness)
+
+      var doc = context.document
+      doc.showMessage("Border color HSB [ "
+        + hue + ", "
+        + saturation + ", "
+        + brightness + " ] copied to clipboard.")
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import 'utility.js'
+
+var copyRgbFill = function(context) {
+  var selection = context.selection
+
+  if (checkLayerCount(selection.count())) {
+    var layer = selection[0]
+
+    if (checkFill(layer)) {
+      var selectedColor = getColor("fill", layer)
+
+      var red = Math.round(selectedColor.red()*255)
+      var green = Math.round(selectedColor.green()*255)
+      var blue = Math.round(selectedColor.blue()*255)
+
+      clipboard.set(red + ", " + green + ", " + blue)
+
+      var doc = context.document
+      doc.showMessage("Fill color RGB [ "
+        + red + ", "
+        + green + ", "
+        + blue + " ] copied to clipboard.")
+    }
+  }
+}
+
+var copyRgbBorder = function(context) {
+  var selection = context.selection
+
+  if (checkLayerCount(selection.count())) {
+    var layer = selection[0]
+
+    if (checkBorder(layer)) {
+      var selectedColor = getColor("border", layer)
+
+      var red = Math.round(selectedColor.red()*255)
+      var green = Math.round(selectedColor.green()*255)
+      var blue = Math.round(selectedColor.blue()*255)
+
+      clipboard.set(red + ", " + green + ", " + blue)
+
+      var doc = context.document
+      doc.showMessage("Border color RGB [ "
+        + red + ", "
+        + green + ", "
+        + blue + " ] copied to clipboard.")
+    }
+  }
+}
