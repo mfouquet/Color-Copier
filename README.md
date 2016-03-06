@@ -1,16 +1,10 @@
 #Color Copier Sketch Plugin
 
-This plugin allows you to quickly copy the RGB, RGBA, HSB, or HEX values for both the
+This plugin allows you to quickly copy the RGB, RGBA, HSB, HSL, HSLA or HEX values for both the
 fill and border colors.
 
 ##Installation
 1. Download the plugin and double-click to install.
-
-If that doesn't work you can
-
-1. Download the plugin.
-2. With Sketch open, go to *Plugins > Reveal Plugins Folder...*
-3. Drag and drop the plugin into that folder.
 
 ##Usage
 No more and no less than one layer can be selected. You can have any type of
