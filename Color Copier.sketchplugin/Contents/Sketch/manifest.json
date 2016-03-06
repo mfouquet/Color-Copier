@@ -1,6 +1,6 @@
 {
   "name": "Color Copier",
-  "description": "Quickly copy the RGB or HEX values for fill or border.",
+  "description": "Quickly copy the RGB, RGBA, HSB, or HEX values for fill or border.",
   "author": "Michael Fouquet",
   "authorEmail": "michael.fouquet@me.com",
   "homepage": "https://github.com/mfouquet/color-copier",
