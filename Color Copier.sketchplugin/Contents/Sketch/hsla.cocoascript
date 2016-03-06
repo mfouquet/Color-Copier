@@ -1,0 +1,111 @@
+@import 'utility.js'
+
+var copyHslaFill = function(context) {
+  var selection = context.selection
+
+  if (checkLayerCount(selection.count())) {
+    var layer = selection[0]
+
+    if (checkFill(layer)) {
+      var selectedColor = getColor("fill", layer)
+
+      // http://axonflux.com/handy-rgb-to-hsl-and-rgb-to-hsv-color-model-c
+      var red = selectedColor.red()
+      var green = selectedColor.green()
+      var blue = selectedColor.blue()
+
+      var max = Math.max(red, blue, green)
+      var min = Math.min(red, blue, green)
+
+      var hue
+      var saturation
+      var lightness = (max + min) / 2
+      var alpha = selectedColor.alpha()
+
+      if (max === min) {
+        hue = 0
+        saturation = 0
+      } else {
+        var d = max - min
+        saturation = lightness > 0.5  ? d / (2 - max - min) : d / (max + min)
+
+        if (max === red) {
+          hue = (green - blue) / d + (green < blue ? 6 : 0);
+        } else if (max === green) {
+          hue = (blue - red) / d + 2;
+        } else if (max === blue) {
+          hue = (red - green) / d + 4;
+        }
+
+        hue /= 6
+        hue *= 360
+        saturation *= 100
+        lightness = Math.round(lightness * 100)
+      }
+
+      clipboard.set(hue + ", " + saturation + ", " + lightness + ", " + alpha)
+
+      var doc = context.document
+      doc.showMessage("Fill color HSLA [ "
+        + hue + ", "
+        + saturation + ", "
+        + lightness + " , "
+        + alpha + " ] copied to clipboard.")
+    }
+  }
+}
+
+var copyHslaBorder = function(context) {
+  var selection = context.selection
+
+  if (checkLayerCount(selection.count())) {
+    var layer = selection[0]
+
+    if (checkBorder(layer)) {
+      var selectedColor = getColor("border", layer)
+
+      // http://axonflux.com/handy-rgb-to-hsl-and-rgb-to-hsv-color-model-c
+      var red = selectedColor.red()
+      var green = selectedColor.green()
+      var blue = selectedColor.blue()
+
+      var max = Math.max(red, blue, green)
+      var min = Math.min(red, blue, green)
+
+      var hue
+      var saturation
+      var lightness = (max + min) / 2
+      var alpha = selectedColor.alpha()
+
+      if (max === min) {
+        hue = 0
+        saturation = 0
+      } else {
+        var d = max - min
+        saturation = lightness > 0.5  ? d / (2 - max - min) : d / (max + min)
+
+        if (max === red) {
+          hue = (green - blue) / d + (green < blue ? 6 : 0);
+        } else if (max === green) {
+          hue = (blue - red) / d + 2;
+        } else if (max === blue) {
+          hue = (red - green) / d + 4;
+        }
+
+        hue /= 6
+        hue *= 360
+        saturation *= 100
+        lightness = Math.round(lightness * 100)
+      }
+
+      clipboard.set(hue + ", " + saturation + ", " + lightness + ", " + alpha)
+
+      var doc = context.document
+      doc.showMessage("Border color HSLA [ "
+        + hue + ", "
+        + saturation + ", "
+        + lightness + " , "
+        + alpha + " ] copied to clipboard.")
+    }
+  }
+}

@@ -9,9 +9,9 @@ var copyHsbFill = function(context) {
     if (checkFill(layer)) {
       var selectedColor = getColor("fill", layer)
 
-      var hue = Math.round(selectedColor.hue()*360)
-      var saturation = Math.round(selectedColor.saturation()*100)
-      var brightness = Math.round(selectedColor.brightness()*100)
+      var hue = Math.round(selectedColor.hue() * 360)
+      var saturation = Math.round(selectedColor.saturation() * 100)
+      var brightness = Math.round(selectedColor.brightness() * 100)
 
       clipboard.set(hue + ", " + saturation + ", " + brightness)
 
@@ -33,9 +33,9 @@ var copyHsbBorder = function(context) {
     if (checkBorder(layer)) {
       var selectedColor = getColor("border", layer)
 
-      var hue = Math.round(selectedColor.hue()*360)
-      var saturation = Math.round(selectedColor.saturation()*100)
-      var brightness = Math.round(selectedColor.brightness()*100)
+      var hue = Math.round(selectedColor.hue() * 360)
+      var saturation = Math.round(selectedColor.saturation() * 100)
+      var brightness = Math.round(selectedColor.brightness() * 100)
 
       clipboard.set(hue + ", " + saturation + ", " + brightness)
 

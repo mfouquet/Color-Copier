@@ -9,9 +9,9 @@ var copyRgbFill = function(context) {
     if (checkFill(layer)) {
       var selectedColor = getColor("fill", layer)
 
-      var red = Math.round(selectedColor.red()*255)
-      var green = Math.round(selectedColor.green()*255)
-      var blue = Math.round(selectedColor.blue()*255)
+      var red = Math.round(selectedColor.red() * 255)
+      var green = Math.round(selectedColor.green() * 255)
+      var blue = Math.round(selectedColor.blue() * 255)
 
       clipboard.set(red + ", " + green + ", " + blue)
 
@@ -33,9 +33,9 @@ var copyRgbBorder = function(context) {
     if (checkBorder(layer)) {
       var selectedColor = getColor("border", layer)
 
-      var red = Math.round(selectedColor.red()*255)
-      var green = Math.round(selectedColor.green()*255)
-      var blue = Math.round(selectedColor.blue()*255)
+      var red = Math.round(selectedColor.red() * 255)
+      var green = Math.round(selectedColor.green() * 255)
+      var blue = Math.round(selectedColor.blue() * 255)
 
       clipboard.set(red + ", " + green + ", " + blue)
 
