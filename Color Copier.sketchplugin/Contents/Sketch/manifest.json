@@ -4,7 +4,7 @@
   "author": "Michael Fouquet",
   "authorEmail": "michael.fouquet@me.com",
   "homepage": "https://github.com/mfouquet/color-copier",
-  "version" : "2.0",
+  "version" : "2.1",
   "compatibleVersion": 3,
   "identifier" : "com.mfouquet.sketch.color-copier",
   "commands" : [

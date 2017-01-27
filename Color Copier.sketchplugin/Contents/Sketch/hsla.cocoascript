@@ -20,7 +20,7 @@ var copyHslaFill = function(context) {
       var hue
       var saturation
       var lightness = (max + min) / 2
-      var alpha = selectedColor.alpha()
+      var alpha = +selectedColor.alpha().toFixed(2)
 
       if (max === min) {
         hue = 0

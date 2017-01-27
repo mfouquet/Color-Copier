@@ -12,9 +12,9 @@ var copyRgbaFill = function(context) {
       var red = Math.round(selectedColor.red() * 255)
       var green = Math.round(selectedColor.green() * 255)
       var blue = Math.round(selectedColor.blue() * 255)
-      var alpha = selectedColor.alpha()
+      var alpha = +selectedColor.alpha().toFixed(2)
 
-      clipboard.set(red + ", " + green + ", " + blue)
+      clipboard.set(red + ", " + green + ", " + blue + ", " + alpha)
 
       var doc = context.document
       doc.showMessage("Fill color RGBA [ "
@@ -38,7 +38,7 @@ var copyRgbaBorder = function(context) {
       var red = Math.round(selectedColor.red() * 255)
       var green = Math.round(selectedColor.green() * 255)
       var blue = Math.round(selectedColor.blue() * 255)
-      var alpha = selectedColor.alpha()
+      var alpha = +selectedColor.alpha().toFixed(2)
 
       clipboard.set(red + ", " + green + ", " + blue + ", " + alpha)
 
