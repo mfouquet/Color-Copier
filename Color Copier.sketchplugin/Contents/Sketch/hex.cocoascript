@@ -8,7 +8,7 @@ var copyHexFill = function(context) {
 
     if (checkFill(layer)) {
       var selectedColor = getColor("fill", layer)
-      var hex = selectedColor.hexValue().toString()
+      var hex = selectedColor.immutableModelObject().hexValue().toString()
 
       clipboard.set(hex)
 
@@ -26,7 +26,7 @@ var copyHexBorder = function(context) {
 
     if (checkBorder(layer)) {
       var selectedColor = getColor("border", layer)
-      var hex = selectedColor.hexValue().toString()
+      var hex = selectedColor.immutableModelObject().hexValue().toString()
 
       clipboard.set(hex)
 
