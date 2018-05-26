@@ -4,140 +4,140 @@
   "author": "Michael Fouquet",
   "authorEmail": "michael.fouquet@me.com",
   "homepage": "https://github.com/mfouquet/color-copier",
-  "version" : "2.1",
+  "version": "2.1",
   "compatibleVersion": 3,
-  "identifier" : "com.mfouquet.sketch.color-copier",
-  "commands" : [
+  "identifier": "com.mfouquet.sketch.color-copier",
+  "commands": [
     {
-      "name" : "Fill",
-      "identifier" : "rgb-fill",
-      "script" : "rgb.cocoascript",
-      "handler" : "copyRgbFill",
-      "shortcut" : "",
+      "name": "Fill",
+      "identifier": "rgb-fill",
+      "script": "rgb.cocoascript",
+      "handler": "copyRgbFill",
+      "shortcut": ""
     },
     {
-      "name" : "Border",
-      "identifier" : "rgb-border",
-      "script" : "rgb.cocoascript",
-      "handler" : "copyRgbBorder",
-      "shortcut" : "",
+      "name": "Border",
+      "identifier": "rgb-border",
+      "script": "rgb.cocoascript",
+      "handler": "copyRgbBorder",
+      "shortcut": ""
     },
     {
-      "name" : "Fill",
-      "identifier" : "rgba-fill",
-      "script" : "rgba.cocoascript",
-      "handler" : "copyRgbaFill",
-      "shortcut" : "",
+      "name": "Fill",
+      "identifier": "rgba-fill",
+      "script": "rgba.cocoascript",
+      "handler": "copyRgbaFill",
+      "shortcut": ""
     },
     {
-      "name" : "Border",
-      "identifier" : "rgba-border",
-      "script" : "rgba.cocoascript",
-      "handler" : "copyRgbaBorder",
-      "shortcut" : "",
+      "name": "Border",
+      "identifier": "rgba-border",
+      "script": "rgba.cocoascript",
+      "handler": "copyRgbaBorder",
+      "shortcut": ""
     },
     {
-      "name" : "Fill",
-      "identifier" : "hsb-fill",
-      "script" : "hsb.cocoascript",
-      "handler" : "copyHsbFill",
-      "shortcut" : "",
+      "name": "Fill",
+      "identifier": "hsb-fill",
+      "script": "hsb.cocoascript",
+      "handler": "copyHsbFill",
+      "shortcut": ""
     },
     {
-      "name" : "Border",
-      "identifier" : "hsb-border",
-      "script" : "hsb.cocoascript",
-      "handler" : "copyHsbBorder",
-      "shortcut" : "",
+      "name": "Border",
+      "identifier": "hsb-border",
+      "script": "hsb.cocoascript",
+      "handler": "copyHsbBorder",
+      "shortcut": ""
     },
     {
-      "name" : "Fill",
-      "identifier" : "hsl-fill",
-      "script" : "hsl.cocoascript",
-      "handler" : "copyHslFill",
-      "shortcut" : "",
+      "name": "Fill",
+      "identifier": "hsl-fill",
+      "script": "hsl.cocoascript",
+      "handler": "copyHslFill",
+      "shortcut": ""
     },
     {
-      "name" : "Border",
-      "identifier" : "hsl-border",
-      "script" : "hsl.cocoascript",
-      "handler" : "copyHslBorder",
-      "shortcut" : "",
+      "name": "Border",
+      "identifier": "hsl-border",
+      "script": "hsl.cocoascript",
+      "handler": "copyHslBorder",
+      "shortcut": ""
     },
     {
-      "name" : "Fill",
-      "identifier" : "hsla-fill",
-      "script" : "hsla.cocoascript",
-      "handler" : "copyHslaFill",
-      "shortcut" : "",
+      "name": "Fill",
+      "identifier": "hsla-fill",
+      "script": "hsla.cocoascript",
+      "handler": "copyHslaFill",
+      "shortcut": ""
     },
     {
-      "name" : "Border",
-      "identifier" : "hsla-border",
-      "script" : "hsla.cocoascript",
-      "handler" : "copyHslaBorder",
-      "shortcut" : "",
+      "name": "Border",
+      "identifier": "hsla-border",
+      "script": "hsla.cocoascript",
+      "handler": "copyHslaBorder",
+      "shortcut": ""
     },
     {
-      "name" : "Fill",
-      "identifier" : "hex-fill",
-      "script" : "hex.cocoascript",
-      "handler" : "copyHexFill",
-      "shortcut" : "",
+      "name": "Fill",
+      "identifier": "hex-fill",
+      "script": "hex.cocoascript",
+      "handler": "copyHexFill",
+      "shortcut": ""
     },
     {
-      "name" : "Border",
-      "identifier" : "hex-border",
-      "script" : "hex.cocoascript",
-      "handler" : "copyHexBorder",
-      "shortcut" : "",
-    },
+      "name": "Border",
+      "identifier": "hex-border",
+      "script": "hex.cocoascript",
+      "handler": "copyHexBorder",
+      "shortcut": ""
+    }
   ],
-  "menu" : {
-    "items" : [
+  "menu": {
+    "items": [
       {
         "title": "RGB",
         "items": [
           "rgb-fill",
-          "rgb-border",
+          "rgb-border"
         ]
       },
       {
         "title": "RGBA",
         "items": [
           "rgba-fill",
-          "rgba-border",
+          "rgba-border"
         ]
       },
       {
         "title": "HSB",
         "items": [
           "hsb-fill",
-          "hsb-border",
+          "hsb-border"
         ]
       },
       {
         "title": "HSL",
         "items": [
           "hsl-fill",
-          "hsl-border",
+          "hsl-border"
         ]
       },
       {
         "title": "HSLA",
         "items": [
           "hsla-fill",
-          "hsla-border",
+          "hsla-border"
         ]
       },
       {
         "title": "HEX",
         "items": [
           "hex-fill",
-          "hex-border",
+          "hex-border"
         ]
       }
     ],
-    "title" : "Color Copier"
-  },
+    "title": "Color Copier"
+  }
 }
